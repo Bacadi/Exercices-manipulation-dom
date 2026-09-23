@@ -17,4 +17,15 @@
   <div class="color blue" ></div>
 </div>
 </body>
+<script>
+    const texte = document.getElementById('text');
+    const boutonsCouleur = document.querySelectorAll('.color');
+
+    boutonsCouleur.forEach((bouton) => {
+      bouton.addEventListener('click', () => {
+        const couleur = bouton.classList[1];
+        texte.style.color = couleur;
+      });
+    });
+  </script>
 </html>
