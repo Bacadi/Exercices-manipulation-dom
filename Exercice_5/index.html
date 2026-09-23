@@ -12,5 +12,23 @@
       <img src="images/image4.jpg" id="image4" />
       <img src="images/image5.jpg" id="image5" />
     </div>
+
+    <script>
+      function activerSurvol(image) {
+        const baseSrc = image.src;
+        const hoverSrc = baseSrc.replace('.jpg', '_2.jpg');
+
+        image.addEventListener('mouseenter', () => {
+          image.src = hoverSrc;
+        });
+
+        image.addEventListener('mouseleave', () => {
+          image.src = baseSrc;
+        });
+      }
+
+      const images = document.querySelectorAll('.container img');
+      images.forEach(activerSurvol);
+    </script>
   </body>
 </html>
