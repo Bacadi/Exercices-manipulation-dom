@@ -11,4 +11,15 @@
     <button type="button" name="button" >Vérification</button>
   </form>
 </body>
+<script>
+  const mdp = document.getElementById('password');
+  const confirmMdp = document.getElementById('confirmPassword');
+  const verifBtn = document.getElementById('verif-btn');
+
+  verifBtn.addEventListener('click', () => {
+    const couleur = mdp.value === confirmMdp.value ? 'green' : 'red';
+    mdp.style.border = `2px solid ${couleur}`;
+    confirmMdp.style.border = `2px solid ${couleur}`;
+  });
+</script>
 </html>
