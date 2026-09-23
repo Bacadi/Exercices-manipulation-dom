@@ -10,5 +10,18 @@
       <img src="images/image3.jpg" id="image3" />
       <img src="images/image4.jpg" id="image4" />
       <img src="images/image5.jpg" id="image5" />
+
+    <script>
+      const images = document.querySelectorAll('img');
+      images.forEach((image) => {
+        image.addEventListener('mouseenter', () => {
+        image.dataset.original = image.src;
+        image.src = image.src.replace('.jpg', '_2.jpg');
+      });
+        image.addEventListener('mouseleave', () => {
+        image.src = image.dataset.original;
+      });
+      });
+    </script>
   </body>
 </html>
