@@ -8,5 +8,12 @@
   <form>
     <label for="lastname">Votre nom  : </label><input type="text" name="lastname" id="lastname" />
   </form>
+
+  <script>
+    const lastname = document.getElementById('lastname');
+    lastname.addEventListener('keydown', () => {
+      alert(lastname.value);
+    });
+  </script>
 </body>
 </html>
